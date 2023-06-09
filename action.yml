@@ -17,11 +17,11 @@ inputs:
     description: A list of game versions that this version supports (comma-separated)
     required: true
   version_type:
-    description: The type of this version (optional, defaults to release)
+    description: The type of version (optional, defaults to release)
     required: false
     default: release
   loaders: 
-    description: A list of loaders that this version supports (comma-separated)
+    description: A list of mod loaders that this version supports (comma-separated)
     required: true
   featured:
     description: Whether this version should be featured (optional, defaults to false)
@@ -32,7 +32,7 @@ inputs:
     required: false
     default: listed
   project_id:
-    description: The ID of your Modrinth project
+    description: The ID of the project this version is for
     required: true
   file: # TODO: Add support for multiple files
     description: The zip file to upload
