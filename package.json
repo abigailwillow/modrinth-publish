@@ -2,6 +2,7 @@
   "name": "modrinth-publish",
   "version": "1.0.0",
   "description": "Action to upload a project hosted on Github to Modrinth",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1"
+    "@actions/github": "^5.1.1",
+    "form-data": "^4.0.0",
+    "node-fetch": "^3.3.1"
   }
 }

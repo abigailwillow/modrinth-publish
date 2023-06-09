@@ -1,18 +1,46 @@
 name: Publish to Modrinth
 description: Publish and update Modrinth projects from GitHub
 inputs:
-  slug:
-    description: The slug of your mod's Modrinth page
+  version_name:
+    description: The name of this version (optional, defaults to the version number)
+    required: false
+  version_number:
+    description: The version number of this version
     required: true
-  file:
+  changelog:
+    description: The changelog for this version (optional)
+    required: false
+  dependencies:
+    description: A list of dependencies for this version (in JSON format)
+    required: false
+  game_versions:
+    description: A list of game versions that this version supports (comma-separated)
+    required: true
+  version_type:
+    description: The type of this version (optional, defaults to release)
+    required: false
+    default: release
+  loaders: 
+    description: A list of loaders that this version supports (comma-separated)
+    required: true
+  featured:
+    description: Whether this version should be featured (optional, defaults to false)
+    required: false
+    default: 'false'
+  status:
+    description: The status of this version (optional, defaults to listed)
+    required: false
+    default: listed
+  project_id:
+    description: The ID of your Modrinth project
+    required: true
+  file: # TODO: Add support for multiple files
     description: The zip file to upload
     required: true
-  version:
-    description: The version of the uploaded file
-    required: true
+
 outputs:
   url:
-    description: The URL of your mod's Modrinth page
+    description: The URL of your Modrinth project
 runs:
   using: node16
   main: index.js
