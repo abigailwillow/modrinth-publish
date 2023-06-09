@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 import Actions from '@actions/core';
-import * as Modrinth from './modrinth.js';
+import Modrinth from './src/modrinth.js';
 
 const versionName = Actions.getInput('version_name');
 const version = Actions.getInput('version_number');
