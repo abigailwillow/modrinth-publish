@@ -1,0 +1,18 @@
+name: Publish to Modrinth
+description: Publish and update Modrinth projects from GitHub
+inputs:
+  slug:
+    description: The slug of your mod's Modrinth page
+    required: true
+  file:
+    description: The zip file to upload
+    required: true
+  version:
+    description: The version of the uploaded file
+    required: true
+outputs:
+  url:
+    description: The URL of your mod's Modrinth page
+runs:
+  using: node16
+  main: index.js
