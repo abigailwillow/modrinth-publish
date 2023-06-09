@@ -1,11 +1,10 @@
 {
   "name": "modrinth-publish",
-  "version": "1.0.0",
   "description": "Action to upload a project hosted on Github to Modrinth",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/create-version.test.js"
   },
   "keywords": [],
   "author": "",
