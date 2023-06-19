@@ -1,5 +1,5 @@
 
-import Publish from '../src/publish.js';
+import Publish from '../src/publish';
 import Assert from 'assert'; 
 
 const now = new Date();

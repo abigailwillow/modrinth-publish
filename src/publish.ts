@@ -1,7 +1,7 @@
-import Modrinth from './modrinth.js';
-import Actions from '@actions/core';
+import Modrinth from './modrinth';
+import * as Actions from '@actions/core';
 
-const Publish = async version => {
+const Publish = async (version, project) => {
     if (!process.env.MODRINTH_TOKEN) { Actions.setFailed('MODRINTH_TOKEN environment variable not set'); return false; }
 
     try {

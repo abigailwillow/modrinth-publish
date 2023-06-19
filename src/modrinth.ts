@@ -1,7 +1,7 @@
 import Fetch from 'node-fetch';
-import File from 'fs';
-import Path from 'path';
-import FormData from 'form-data';
+import * as File from 'fs';
+import * as Path from 'path';
+import * as FormData from 'form-data';
 
 const baseUrl = 'https://api.modrinth.com/v2';
 const headers = {};
